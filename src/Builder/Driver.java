@@ -1,6 +1,6 @@
 package Builder;
 
-public class main {
+public class Driver {
 
     public static void main(String[] args) {
         Shop shop = new Shop();
