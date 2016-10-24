@@ -3,7 +3,6 @@ package Builder;
 public class main {
 
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         Shop shop = new Shop();
         
         VehicleBuilder minivanBuilder = new MiniVan();

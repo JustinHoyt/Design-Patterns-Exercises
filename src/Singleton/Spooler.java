@@ -1,11 +1,11 @@
-package Spooler;
+package Singleton;
 
 public class Spooler {
-    private static boolean instance_flag= false; private Spooler() {
-    }
+    private static boolean instanceFlag= false; 
+    private Spooler() {}
     public static Spooler getSpooler() {
-        if (! instance_flag){ 
-            instance_flag = true;
+        if (! instanceFlag){ 
+            instanceFlag = true;
             return new Spooler (); 
         } else{
             return null;
