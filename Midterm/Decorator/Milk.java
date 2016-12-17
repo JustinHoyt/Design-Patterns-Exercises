@@ -15,7 +15,8 @@ public class Milk extends CondimentDecorator {
 
     @Override
     public double getCost() {
-        return .15 + beverage.getCost();
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }
