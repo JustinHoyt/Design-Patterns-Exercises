@@ -68,7 +68,7 @@ public class MortgageApplicationFacade {
         return credit;
     }
 
-    public void setName(String name) {
+    public void setCredit(Credit credit) {
         this.credit = credit;
     }
 }
