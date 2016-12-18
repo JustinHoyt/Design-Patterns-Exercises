@@ -67,8 +67,4 @@ public class MortgageApplicationFacade {
     public Credit getCredit() {
         return credit;
     }
-
-    public void setCredit(Credit credit) {
-        this.credit = credit;
-    }
 }
