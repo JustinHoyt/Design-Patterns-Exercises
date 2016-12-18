@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class ProtectionProxy implements IClient{
     private String password;
     private RealClient client;
+    private Scanner scanner;
     
     @Override
     public String getAccountNum() {
         System.out.println("Enter Password: ");
-        Scanner sc = new Scanner(System.in);
-        String tempPwd = sc.toString();
+        scanner = new Scanner(System.in);
+        String tempPwd = scanner.nextLine();
         if (tempPwd.equals(password)) {
             return client.getAccountNum();
         }
