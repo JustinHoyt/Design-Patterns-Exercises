@@ -1,0 +1,77 @@
+package Facade;
+
+public class MortgageApplicationFacade {
+    private Customer customer;
+    private Bank bank;
+    private Loan loan;
+    private Credit credit;
+    
+    // Constructor
+    public MortgageApplicationFacade(Customer customer, Bank bank, Loan loan, Credit credit) {
+        super();
+        this.customer = customer;
+        this.bank = bank;
+        this.loan = loan;
+        this.credit = credit;
+    }
+    
+    public boolean isEligible(Customer customer, int loanAmount) {
+        int eligibilityScore = 0;
+        
+        if (bank.hasSufficientSavings(customer, loanAmount)) {
+            eligibilityScore += 2;
+        }
+        else eligibilityScore--;
+        
+        if(!loan.hasBadLoans(customer)) {
+            eligibilityScore++;
+        }
+        else eligibilityScore--;
+        
+        if(!credit.hasBadCredit(customer)) {
+            eligibilityScore++;
+        }
+        else eligibilityScore--;
+        
+        if (eligibilityScore >= 2) {
+            return true;
+        }
+        return false;
+    }
+
+    // Getters and Setters
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Bank getBank() {
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
+    }
+
+    public Loan getLoan() {
+        return loan;
+    }
+
+    public void setLoan(Loan loan) {
+        this.loan = loan;
+    }
+
+    public Credit getCredit() {
+        return credit;
+    }
+<<<<<<< HEAD
+
+    public void setCredit(Credit credit) {
+        this.credit = credit;
+    }
+=======
+>>>>>>> 85cc4b438b9b9c372192889db1f29eb847709988
+}
